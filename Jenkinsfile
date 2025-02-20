@@ -9,9 +9,9 @@ pipeline {
   stages {
     stage('Build') {
        steps {
-         script {
-            sh "mvn ${MAVEN_ARGS}"
-        }
+         withMaven(maven : 'apache-maven-3.9.9) {
+                     sh "mvn ${MAVEN_ARGS}"
+                 }
        }
     }
 
