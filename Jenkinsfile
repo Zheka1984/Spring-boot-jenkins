@@ -16,9 +16,7 @@ pipeline {
     }
 
  stage('clean container') {
- agent {
-         label ‘docker’
-         }
+
       steps {
        sh 'docker ps -f name=${dockerContainerName} -q | xargs --no-run-if-empty docker container stop'
        sh 'docker container ls -a -fname=${dockerContainerName} -q | xargs -r docker container rm'
