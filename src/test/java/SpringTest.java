@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.hamcrest.Matchers.*;
 
 @SpringBootTest
@@ -27,6 +28,7 @@ public class SpringTest {
                 .statusCode(200)
                         .and().extract().asPrettyString();
         System.out.println(client);
+        assertThatThrownBy(() -> client.lines().forEach(System.out::println));
 
     }
 
