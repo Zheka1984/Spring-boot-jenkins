@@ -39,5 +39,12 @@ pipeline {
        }
       }
     }
+    stage ('start app'){
+    steps{
+    script{
+    sh 'mvn  spring-boot:run'
+    }
+    }
+    }
   }
 }
