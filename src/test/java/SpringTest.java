@@ -29,8 +29,6 @@ public class SpringTest {
                         .and().extract().asPrettyString();
         System.out.println(client);
         assertThatThrownBy(() -> client.lines().forEach(System.out::println));
-int i = 10.0;
-double d = i;
     }
 
 }
