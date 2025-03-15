@@ -41,7 +41,7 @@ pipeline {
     }
     stage ('start app'){
     steps{
-    script{
+    withMaven(maven : 'apache-maven-3.9.9'){
     sh 'mvn  spring-boot:run'
     }
     }
