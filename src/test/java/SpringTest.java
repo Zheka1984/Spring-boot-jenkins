@@ -20,7 +20,7 @@ public class SpringTest {
     public void baseTest(){
         System.out.println("the test has been launched");
         Gson gson = new Gson();
-        RestAssured.baseURI = "http://localhost:8080";
+        RestAssured.baseURI = "http://localhost:8090";
         String client = given()
                 .when()
                 .get("/company/2")
