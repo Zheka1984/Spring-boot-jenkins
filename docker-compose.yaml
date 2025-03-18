@@ -7,9 +7,9 @@ services:
       - '8090:8090'
     container_name: bookapi
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://host.docker.internal:5432/customers
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=1
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/customers
+      - SPRING_DATASOURCE_USERNAME=book-user
+      - SPRING_DATASOURCE_PASSWORD=k9ZqLC
     links:
       - 'db:database'
   db:
