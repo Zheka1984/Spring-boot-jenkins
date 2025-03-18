@@ -23,8 +23,8 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
-      - 6432:5432
-    network_mode: "host"
+      - "6432:5432"
+    network_mode: service:db
 volumes:
   db-data:
     driver: local
