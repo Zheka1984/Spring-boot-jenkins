@@ -21,15 +21,10 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 1
       POSTGRES_DB: customers
-    volumes:
-      - db-data:/var/lib/postgresql/data
     ports:
       - 6432:5432
     networks:
       app:
-volumes:
-  db-data:
-    driver: local
 networks:
   app:
     driver: bridge
