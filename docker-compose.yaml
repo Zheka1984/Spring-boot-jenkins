@@ -9,7 +9,7 @@ services:
       - postgres
     container_name: bookapi
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/customers
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://3254f0167f30:5432/customers
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=1
     links:
