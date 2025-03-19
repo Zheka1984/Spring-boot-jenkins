@@ -23,9 +23,7 @@ services:
       POSTGRES_DB: customers
     volumes:
       - db-data:/var/lib/postgresql/data
-    ports:
-      - "6432:5432"
-    network_mode: service:db
+    network_mode: host
 networks:
       postgres:
         driver: bridge
